@@ -1,0 +1,239 @@
+/* Geral */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --font-primary: "roboto", serif;
+    --font-secundary: "Arial", serif;
+}
+/* /Geral */
+
+/* menu-lateral-abertura */
+.hamburguer{
+    background-color: transparent;
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.show-menu .hamburguer{
+    right: 16.5rem;
+    transition: 0.4s;
+}
+
+.line{
+    width: 100%;
+    height: .1rem;
+    background-color: #fff;
+    box-shadow: 0.1rem 0.1rem 1px #000;
+    transition: transform 1.5s;
+}
+.show-menu #line1{
+    transform: rotate(45deg) translate(.4rem, .6rem);
+}
+.show-menu #line2{
+    opacity: 0;
+    visibility: hidden;
+}
+.show-menu #line3{
+    transform: rotate(-45deg) translate(-.2rem, -.3rem);
+}
+
+.hamburguer span{
+    position: absolute;
+    left: 3rem;
+    height: 2rem;;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #302b63;
+    color: #fff;
+    font-family: var(--font-secundary);
+    opacity: 0;
+}
+
+.hamburguer span::before{
+    content: "";
+    position: absolute;
+    border-right: .5rem solid #24243e;
+    border-top: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    left: -.9rem;
+}
+
+.show-menu .hamburguer:hover span{
+    opacity: 1;
+}
+
+/* /menu-lateral-abertura */
+
+/* header */
+header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    animation: zoom 15s;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.banner{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+
+.banner h1{
+    color: #fff;
+    font-size: 4.2rem;
+    font-family: var(--font-primary);
+    font-weight: 200;
+    text-shadow: .3rem .4rem 2px rgba(0, 0, 0, 0.4);
+    line-height: 5rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: movebanner 1.5s 0.3s forwards;
+}
+
+.banner p{
+    font-family: var(--font-secundary);
+    color: #fff;
+    font-size: 2rem ;
+    text-shadow: .2rem .3rem rgba(0, 0, 0, 4);
+    margin-bottom: 2.9rem;
+    opacity: 0;
+    animation: movebanner 2s 0.6s forwards;
+}
+
+.banner button{
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    box-shadow: 0 0 2.3px 2.3px #000;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    animation: movebanner 1s forwards;
+}
+
+.banner button:hover{
+    opacity: 0.9;
+    background: #302b63;
+}
+
+@keyframes movebanner{
+    0%{
+        transform: translate(10rem) rotateY(-30deg);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0) rotateY(0);
+    }
+}
+/* /header */
+
+/* menu lateral */
+.sidebar{
+    width: 20rem;
+    height: 95vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: all 0.3s;
+}
+
+.show-menu .sidebar{
+    right: 0;
+}
+
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item{
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.menu-link{
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    color:rgba(0, 0, 0, 0.4);
+    transition: color 1s;
+}
+
+.menu-link:hover{
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.social-midia{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-midia i{
+    color: rgba(0, 0, 0, 0.9);
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+/* /menu-lateral /*
+

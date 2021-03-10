@@ -1,10 +1,14 @@
+
 # portfolio
 Meu primeiro portfolio.
 
 ## Tarefas
-### Concluído:
-A estrutura do Arquivo.
 
+
+### Concluído:
+
+A estrutura do Arquivo.
+Menu Lateral
 
 
 
@@ -14,8 +18,9 @@ A estrutura do Arquivo.
 
 ##### Em Andamento:
 
-
-
+Cabeçário (header>
+Projetos
+Conhecimento
 
 
 
@@ -23,10 +28,10 @@ A estrutura do Arquivo.
 
 
 #### Pendentes:
-Cabeçário (header>
-Menu Lateral
-Projetos
-Conhecimento
+
+
+
+
 Contato
 Orçamento
 Rodapé (footer>
@@ -36,7 +41,8 @@ Fazer o site ser resilente para todos os programas.
 END.
 
 ## Icones
+
 :package: nova funcionalidade
 :up: atualização
-:beatle: correção de bug
+:beetle: correção de bug
 :checkered_flag: release
