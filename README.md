@@ -1,30 +1,18 @@
 # portfolio
 
-Meu primeiro portfolio.
+Meu primeiro portfolio > aprendizado <
 
 ## Tarefas
 
-
 ### Concluído:
-
--A estrutura do Arquivo.
--Menu Lateral
 
 ##### Em Andamento:
 
--Cabeçário (header>
--Projetos
--Conhecimento
 
 #### Pendentes:
 
--Contato
--Orçamento
--Rodapé (footer>
--Loading
--JS Orçamento
-- Fazer o site ser resilente para todos os programas.
--END.
+:up: modificar tudo constantemente.
+:beetle: Projeto imagem lateral direito colidindo no hamburguer.
 
 ## Icones
 
